@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Currency Denominator</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="page-shell">
+    <header class="hero">
+      <nav class="topbar">
+        <div class="brand-block">
+          <span class="brand-mark">CD</span>
+          <div>
+            <p class="eyebrow">Offline Exchange Suite</p>
+            <h1>Currency Denominator</h1>
+          </div>
+        </div>
+        <p class="team-pill">Created by Venkey, Sanjay, Hasitha and Praharshita</p>
+      </nav>
+
+      <section class="hero-copy">
+        <div>
+          <p class="hero-kicker">Fast. Reliable. Professional.</p>
+          <h2>Convert global currencies instantly with a polished offline experience built for dependable everyday use.</h2>
+        </div>
+        <p class="hero-text">
+          Compare values instantly, review built-in exchange pairs, and use the converter anytime without relying on an internet connection.
+        </p>
+      </section>
+    </header>
+
+    <main class="dashboard">
+      <section class="converter-card glass-card">
+        <div class="card-heading">
+          <div>
+            <p class="eyebrow">Offline Converter</p>
+            <h3>Convert any supported currency</h3>
+          </div>
+          <span id="statusBadge" class="status-badge">Offline ready</span>
+        </div>
+
+        <form id="converterForm" class="converter-form">
+          <label class="field">
+            <span>Amount</span>
+            <input id="amountInput" type="number" min="0" step="0.01" value="1" required>
+          </label>
+
+          <div class="currency-grid">
+            <label class="field">
+              <span>From</span>
+              <select id="fromCurrency" aria-label="Convert from currency"></select>
+            </label>
+
+            <button id="swapButton" class="swap-button" type="button" aria-label="Swap currencies">
+              Swap
+            </button>
+
+            <label class="field">
+              <span>To</span>
+              <select id="toCurrency" aria-label="Convert to currency"></select>
+            </label>
+          </div>
+
+          <button id="convertButton" class="convert-button" type="submit">Convert Now</button>
+        </form>
+
+        <section class="result-panel">
+          <p class="result-label">Converted amount</p>
+          <p id="resultValue" class="result-value">--</p>
+          <p id="resultMeta" class="result-meta">Using built-in exchange reference rates.</p>
+        </section>
+      </section>
+
+      <aside class="insights-panel">
+        <section class="glass-card metrics-card">
+          <p class="eyebrow">Reference Snapshot</p>
+          <h3>Popular exchange pairs</h3>
+          <div id="popularRates" class="rate-list"></div>
+        </section>
+
+        <section class="glass-card team-card">
+          <p class="eyebrow">Project Team</p>
+          <h3>Built by Group of Four</h3>
+          <div class="team-grid">
+            <article>
+              <span class="member-index">01</span>
+              <h4>Venkey</h4>
+              <p>Product direction and delivery</p>
+            </article>
+            <article>
+              <span class="member-index">02</span>
+              <h4>Sanjay</h4>
+              <p>Frontend coordination and polish</p>
+            </article>
+            <article>
+              <span class="member-index">03</span>
+              <h4>Hasitha</h4>
+              <p>Data flow and converter logic</p>
+            </article>
+            <article>
+              <span class="member-index">04</span>
+              <h4>Praharshita</h4>
+              <p>Testing and experience review</p>
+            </article>
+          </div>
+        </section>
+      </aside>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
